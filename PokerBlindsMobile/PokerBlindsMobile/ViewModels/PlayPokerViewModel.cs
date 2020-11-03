@@ -55,8 +55,6 @@ namespace PokerBlindsMobile.ViewModels
             {
                 TimerToggle = shouldStart;
             }
-
-            Debug.WriteLine($"Toggle is: {shouldStart}");
         }
     }
 }

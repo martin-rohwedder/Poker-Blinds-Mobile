@@ -7,25 +7,51 @@
     <ContentPage.BindingContext>
         <vm:PlayPokerViewModel />
     </ContentPage.BindingContext>
-    
-    <ContentPage.Content>
-        <StackLayout>
-            <Label Text="{Binding CurrentTime, StringFormat='{}{0:mm\\:ss}'}"
-                   FontSize="36"
-                   HorizontalOptions="Center"
-                   VerticalOptions="Center" />
 
-            <Button Text="Start" Command="{Binding StartStopTimerCommand}">
-                <Button.CommandParameter>
-                    <s:Boolean>true</s:Boolean>
-                </Button.CommandParameter>
-            </Button>
-            
-            <Button Text="Pause" Command="{Binding StartStopTimerCommand}">
-                <Button.CommandParameter>
-                    <s:Boolean>false</s:Boolean>
-                </Button.CommandParameter>
-            </Button>
-        </StackLayout>
+    <ContentPage.Content>
+        <Grid Margin="5">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+
+            <FlexLayout Grid.Row="0"
+                        JustifyContent="Center"
+                        AlignItems="Center">
+                <Label Text="Blinds"
+                       FontSize="48" />
+            </FlexLayout>
+            <FlexLayout Grid.Row="1"
+                        Direction="Column"
+                        JustifyContent="Center"
+                        AlignItems="Center">
+                <Label Text="100/200" 
+                       FontSize="48" />
+                <Label Text="Ante: 20" 
+                       FontSize="24" />
+            </FlexLayout>
+            <FlexLayout Grid.Row="2"
+                        Direction="Column"
+                        JustifyContent="End"
+                        AlignItems="Center">
+                <Label Text="{Binding CurrentTime, StringFormat='{}{0:mm\\:ss}'}"
+                       FontSize="36"
+                       HorizontalTextAlignment="Center" />
+                <StackLayout Orientation="Horizontal">
+                    <Button Text="Start" Command="{Binding StartStopTimerCommand}">
+                        <Button.CommandParameter>
+                            <s:Boolean>true</s:Boolean>
+                        </Button.CommandParameter>
+                    </Button>
+
+                    <Button Text="Pause" Command="{Binding StartStopTimerCommand}">
+                        <Button.CommandParameter>
+                            <s:Boolean>false</s:Boolean>
+                        </Button.CommandParameter>
+                    </Button>
+                </StackLayout>
+            </FlexLayout>
+        </Grid>
     </ContentPage.Content>
 </ContentPage>
