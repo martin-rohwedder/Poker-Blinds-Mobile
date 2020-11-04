@@ -4,7 +4,7 @@
              x:Class="PokerBlindsMobile.Views.PlayPokerPage"
              xmlns:vm="clr-namespace:PokerBlindsMobile.ViewModels"
              xmlns:s="clr-namespace:System;assembly=mscorlib"
-             xmlns:extensions="clr-namespace:PokerBlindsMobile.Extensions">
+             BackgroundImageSource="TileBackground.xml">
     <ContentPage.BindingContext>
         <vm:PlayPokerViewModel />
     </ContentPage.BindingContext>
@@ -16,10 +16,6 @@
                 <RowDefinition Height="*" />
                 <RowDefinition Height="*" />
             </Grid.RowDefinitions>
-
-            <!-- BG Repeat - See https://forums.xamarin.com/discussion/comment/59682/#Comment_59682 -->
-            <Image Source="{extensions:ImageResource PokerBlindsMobile.Resources.Images.PokerBG.jpg}"
-                   Aspect="AspectFill" Grid.RowSpan="3" />
             
             <FlexLayout Grid.Row="0"
                         JustifyContent="Center"
