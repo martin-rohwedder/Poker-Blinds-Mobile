@@ -3,6 +3,11 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="PokerBlindsMobile.App">
     <Application.Resources>
-
+        <Style TargetType="{x:Type ContentPage}"
+               ApplyToDerivedTypes="True">
+            <!-- Set Tiled Background on every page as default -->
+            <Setter Property="BackgroundImageSource"
+                    Value="TileBackground.xml" />
+        </Style>
     </Application.Resources>
 </Application>

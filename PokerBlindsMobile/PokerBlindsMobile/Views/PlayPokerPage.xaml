@@ -3,8 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="PokerBlindsMobile.Views.PlayPokerPage"
              xmlns:vm="clr-namespace:PokerBlindsMobile.ViewModels"
-             xmlns:s="clr-namespace:System;assembly=mscorlib"
-             BackgroundImageSource="TileBackground.xml">
+             xmlns:s="clr-namespace:System;assembly=mscorlib">
     <ContentPage.BindingContext>
         <vm:PlayPokerViewModel />
     </ContentPage.BindingContext>
