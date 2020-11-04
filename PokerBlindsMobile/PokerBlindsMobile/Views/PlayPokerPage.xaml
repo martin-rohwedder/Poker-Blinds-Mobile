@@ -3,19 +3,24 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="PokerBlindsMobile.Views.PlayPokerPage"
              xmlns:vm="clr-namespace:PokerBlindsMobile.ViewModels"
-             xmlns:s="clr-namespace:System;assembly=mscorlib">
+             xmlns:s="clr-namespace:System;assembly=mscorlib"
+             xmlns:extensions="clr-namespace:PokerBlindsMobile.Extensions">
     <ContentPage.BindingContext>
         <vm:PlayPokerViewModel />
     </ContentPage.BindingContext>
 
     <ContentPage.Content>
-        <Grid Margin="5">
+        <Grid>
             <Grid.RowDefinitions>
                 <RowDefinition Height="*" />
                 <RowDefinition Height="*" />
                 <RowDefinition Height="*" />
             </Grid.RowDefinitions>
 
+            <!-- BG Repeat - See https://forums.xamarin.com/discussion/comment/59682/#Comment_59682 -->
+            <Image Source="{extensions:ImageResource PokerBlindsMobile.Resources.Images.PokerBG.jpg}"
+                   Aspect="AspectFill" Grid.RowSpan="3" />
+            
             <FlexLayout Grid.Row="0"
                         JustifyContent="Center"
                         AlignItems="Center">
